@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-eks-demo-svc
+  labels:
+    app: devops-eks-demo
+spec:
+  type: ClusterIP
+  selector:
+    app: devops-eks-demo
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
